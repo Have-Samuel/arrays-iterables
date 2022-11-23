@@ -35,3 +35,6 @@ console.log(hobbies);
 
 hobbies[0] = 'Mopping';
 console.log(hobbies);
+
+hobbies.splice(0);
+console.log(hobbies);
