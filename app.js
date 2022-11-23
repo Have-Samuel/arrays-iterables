@@ -85,7 +85,7 @@
 
 // console.log(taxAdjustedPrice);
 
-const prices = [1.99, 2.99, 3.99, 4.99];
+const prices = [1.99, 11.78, 5.1, 10.09, 2.99, 3.99, 4.99];
 const tax = 0.19;
 
 const taxAdjustableValue = prices.map((price, idx, prices) => {
@@ -93,4 +93,17 @@ const taxAdjustableValue = prices.map((price, idx, prices) => {
   return priceObj;
 });
 
-console.log(prices, taxAdjustableValue);
+// console.log(prices, taxAdjustableValue);
+
+const sortedPrices = prices.sort((x, y) => {
+  if (x > y) {
+    return -1;
+  }else if (x === y) {
+    return 0;
+  } else {
+    return 1;
+  }
+});
+
+// console.log(sortedPrices.reverse());
+console.log(sortedPrices);
