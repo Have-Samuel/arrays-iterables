@@ -85,69 +85,77 @@
 
 // console.log(taxAdjustedPrice);
 
-const prices = [1.99, 11.78, 5.1, 10.09, 2.99, 3.99, 4.99];
-const tax = 0.19;
+// const prices = [1.99, 11.78, 5.1, 10.09, 2.99, 3.99, 4.99];
+// const tax = 0.19;
 
-const taxAdjustableValue = prices.map((price, idx, prices) => {
-  const priceObj = { index: idx, taxAdjPrice: price * (1 + tax) };
-  return priceObj;
-});
-
-// console.log(prices, taxAdjustableValue);
-
-const sortedPrices = prices.sort((x, y) => {
-  if (x > y) {
-    return -1;
-  }else if (x === y) {
-    return 0;
-  } else {
-    return 1;
-  }
-});
-
-// console.log(sortedPrices.reverse());
-console.log(sortedPrices);
-
-const filteredPrices = prices.filter((price) => price > 7);
-
-console.log(filteredPrices);
-
-// let sum = 0;
-
-// prices.forEach((price) => {
-//   sum += price;
+// const taxAdjustableValue = prices.map((price, idx, prices) => {
+//   const priceObj = { index: idx, taxAdjPrice: price * (1 + tax) };
+//   return priceObj;
 // });
+
+// // console.log(prices, taxAdjustableValue);
+
+// const sortedPrices = prices.sort((x, y) => {
+//   if (x > y) {
+//     return -1;
+//   }else if (x === y) {
+//     return 0;
+//   } else {
+//     return 1;
+//   }
+// });
+
+// // console.log(sortedPrices.reverse());
+// console.log(sortedPrices);
+
+// const filteredPrices = prices.filter((price) => price > 7);
+
+// console.log(filteredPrices);
+
+// // let sum = 0;
+
+// // prices.forEach((price) => {
+// //   sum += price;
+// // });
+
+// // console.log(sum);
+
+// // Reduce()
+// const sum = prices.reduce((preValue, currValue) => preValue + currValue, 0);
 
 // console.log(sum);
 
-// Reduce()
-const sum = prices.reduce((preValue, currValue) => preValue + currValue, 0);
+// const data = 'NewYork;10.99;Have';
+// // Split() & Join()
+// const transfomedData = data.split(';');
+// transfomedData[1] = +transfomedData[1];
+// console.log(transfomedData);
 
-console.log(sum);
+// const nameFragment = ['Have', 'Samuel'];
+// const label = nameFragment.join(' ');
 
-const data = 'NewYork;10.99;Have';
-// Split() & Join()
-const transfomedData = data.split(';');
-transfomedData[1] = +transfomedData[1];
-console.log(transfomedData);
+// console.log(label);
 
-const nameFragment = ['Have', 'Samuel'];
-const label = nameFragment.join(' ');
+// // Spread Operator
+// const copiedNameFragment = [...nameFragment];
+// nameFragment.push('Kabareebe');
+// console.log(nameFragment, copiedNameFragment);
 
-console.log(label);
+// console.log(Math.min(...prices));
 
-// Spread Operator
-const copiedNameFragment = [...nameFragment];
-nameFragment.push('Kabareebe');
-console.log(nameFragment, copiedNameFragment);
+// const person = [{ name: 'Have', age: 35 }, { name: 'Shannel', age: 30 }];
+// person.push({ name: 'Kente', age: 8 });
+// const copiedPersons = person.map((person) => (
+//   { name: person.name, age: person.age }));
 
-console.log(Math.min(...prices));
+// // person[1].age = 35;
 
-const person = [{ name: 'Have', age: 35 }, { name: 'Shannel', age: 30 }];
-person.push({ name: 'Kente', age: 8 });
-const copiedPersons = person.map((person) => (
-  { name: person.name, age: person.age }));
+// console.log(person, copiedPersons);
 
-// person[1].age = 35;
+const nameData = ['Have', 'Shannel', 800, 'kool'];
+// const firstName = nameData[0];
+// const secondName = nameData[1];
 
-console.log(person, copiedPersons);
+const [firstName, secondName, ...otherData] = nameData;
+
+console.log(firstName, secondName, otherData);
