@@ -39,31 +39,48 @@
 // hobbies.splice(0);
 // console.log(hobbies);
 
-const testResult = [1, 5.7, 0.998, 9.1, 7.5, 70, 3.9];
-// const storedResult = testResult.slice(-3);
-const storedResult = testResult.concat([2.55, 6.898, 5.87]);
+// const testResult = [1, 5.7, 0.998, 9.1, 7.5, 70, 3.9];
+// // const storedResult = testResult.slice(-3);
+// const storedResult = testResult.concat([2.55, 6.898, 5.87]);
 
-testResult.push(99.5);
-console.log(testResult.includes(0.998));
-console.log(testResult.indexOf(0.998) !== -1);
+// testResult.push(99.5);
+// console.log(testResult.includes(0.998));
+// console.log(testResult.indexOf(0.998) !== -1);
 
-console.log(storedResult, testResult);
+// console.log(storedResult, testResult);
 
-console.log(testResult.lastIndexOf(7.5));
+// console.log(testResult.lastIndexOf(7.5));
 
-const personalData = [{ name: 'Justine' }, { name: 'Have' }];
-console.log(personalData.indexOf({ name: 'Have' }));
+// const personalData = [{ name: 'Justine' }, { name: 'Have' }];
+// console.log(personalData.indexOf({ name: 'Have' }));
 
-const have = personalData.find((person, idx, persons) => {
-  return person.name === 'Have';
+// const have = personalData.find((person, idx, persons) => {
+//   return person.name === 'Have';
+// });
+
+// have.name = 'Shannel';
+
+// console.log(have, personalData);
+
+// const justineIndex = personalData.findIndex((person, idx, persons) => {
+//   return person.name === 'Justine';
+// });
+
+// console.log(justineIndex);
+
+const prices = [1.99, 2.99, 3.99, 4.99];
+const tax = 0.19;
+const taxAdjustedPrice = [];
+
+// for (const price of prices ) {
+//   taxAdjustedPrice.push(price * (1 + tax));
+// }
+
+// console.log(taxAdjustedPrice);
+
+prices.forEach((price, idx, prices) => {
+  const priceObj = { index: idx, taxAdjPrice: price * (1 + tax) };
+  taxAdjustedPrice.push(priceObj);
 });
 
-have.name = 'Shannel';
-
-console.log(have, personalData);
-
-const justineIndex = personalData.findIndex((person, idx, persons) => {
-  return person.name === 'Justine';
-});
-
-console.log(justineIndex);
+console.log(taxAdjustedPrice);
