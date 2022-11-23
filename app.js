@@ -123,3 +123,9 @@ console.log(filteredPrices);
 const sum = prices.reduce((preValue, currValue) => preValue + currValue, 0);
 
 console.log(sum);
+
+const data = 'NewYork;10.99;Have';
+
+const transfomedData = data.split(';');
+transfomedData[1] = +transfomedData[1];
+console.log(transfomedData);
