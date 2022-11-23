@@ -12,3 +12,16 @@ console.log(listItems);
 
 const arrayListItems = Array.from(listItems);
 console.log(arrayListItems);
+
+const hobbies = ['Cooking', 'Reading'];
+const personalData = [30, 'Have', { moreDetail: [] }];
+
+const analyticsData = [[1, 3, 5], [8, 9, 30]];
+
+for (const data of analyticsData) {
+  for (dataPoint of data) {
+    console.log(dataPoint);
+  }
+}
+
+console.log(personalData[2]);
