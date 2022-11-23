@@ -68,19 +68,29 @@
 
 // console.log(justineIndex);
 
-const prices = [1.99, 2.99, 3.99, 4.99];
-const tax = 0.19;
-const taxAdjustedPrice = [];
+// const prices = [1.99, 2.99, 3.99, 4.99];
+// const tax = 0.19;
+// const taxAdjustedPrice = [];
 
-// for (const price of prices ) {
-//   taxAdjustedPrice.push(price * (1 + tax));
-// }
+// // for (const price of prices ) {
+// //   taxAdjustedPrice.push(price * (1 + tax));
+// // }
+
+// // console.log(taxAdjustedPrice);
+
+// prices.forEach((price, idx, prices) => {
+//   const priceObj = { index: idx, taxAdjPrice: price * (1 + tax) };
+//   taxAdjustedPrice.push(priceObj);
+// });
 
 // console.log(taxAdjustedPrice);
 
-prices.forEach((price, idx, prices) => {
+const prices = [1.99, 2.99, 3.99, 4.99];
+const tax = 0.19;
+
+const taxAdjustableValue = prices.map((price, idx, prices) => {
   const priceObj = { index: idx, taxAdjPrice: price * (1 + tax) };
-  taxAdjustedPrice.push(priceObj);
+  return priceObj;
 });
 
-console.log(taxAdjustedPrice);
+console.log(prices, taxAdjustableValue);
