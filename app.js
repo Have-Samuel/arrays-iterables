@@ -26,15 +26,22 @@
 
 // console.log(personalData[2]);
 
-const hobbies = ['Cooking', 'Popping'];
-hobbies.unshift('Knitting');
-hobbies.push('Dancing');
-hobbies.pop();
-hobbies.shift();
-console.log(hobbies);
+// const hobbies = ['Cooking', 'Popping'];
+// hobbies.unshift('Knitting');
+// hobbies.push('Dancing');
+// hobbies.pop();
+// hobbies.shift();
+// console.log(hobbies);
 
-hobbies[0] = 'Mopping';
-console.log(hobbies);
+// hobbies[0] = 'Mopping';
+// console.log(hobbies);
 
-hobbies.splice(0);
-console.log(hobbies);
+// hobbies.splice(0);
+// console.log(hobbies);
+
+const testResult = [1, 5.7, 0.998, 9.1, 7.5, 70, 3.9];
+const storedResult = testResult.slice(-3);
+
+testResult.push(99.5);
+
+console.log(storedResult, testResult);
