@@ -40,7 +40,8 @@
 // console.log(hobbies);
 
 const testResult = [1, 5.7, 0.998, 9.1, 7.5, 70, 3.9];
-const storedResult = testResult.slice(-3);
+// const storedResult = testResult.slice(-3);
+const storedResult = testResult.concat([2.55, 6.898, 5.87]);
 
 testResult.push(99.5);
 
