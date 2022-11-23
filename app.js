@@ -129,3 +129,8 @@ const data = 'NewYork;10.99;Have';
 const transfomedData = data.split(';');
 transfomedData[1] = +transfomedData[1];
 console.log(transfomedData);
+
+const nameFragment = ['Have', 'Samuel'];
+const label = nameFragment.join(' ');
+
+console.log(label);
