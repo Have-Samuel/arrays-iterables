@@ -107,3 +107,9 @@ const sortedPrices = prices.sort((x, y) => {
 
 // console.log(sortedPrices.reverse());
 console.log(sortedPrices);
+
+const filteredPrices = prices.filter((price, idx, prices) => {
+  return price > 7;
+});
+
+console.log(filteredPrices);
