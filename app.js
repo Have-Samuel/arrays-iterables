@@ -46,3 +46,9 @@ const storedResult = testResult.concat([2.55, 6.898, 5.87]);
 testResult.push(99.5);
 
 console.log(storedResult, testResult);
+
+console.log(testResult.lastIndexOf(7.5));
+
+const personalData = [{ name: 'Justine' }, { name: 'Have' }];
+
+console.log(personalData.indexOf({ name: 'Have' }));
