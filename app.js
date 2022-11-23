@@ -111,3 +111,15 @@ console.log(sortedPrices);
 const filteredPrices = prices.filter((price) => price > 7);
 
 console.log(filteredPrices);
+
+// let sum = 0;
+
+// prices.forEach((price) => {
+//   sum += price;
+// });
+
+// console.log(sum);
+
+const sum = prices.reduce((preValue, currValue) => preValue + currValue, 0);
+
+console.log(sum);
