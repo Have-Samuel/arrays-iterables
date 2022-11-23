@@ -50,5 +50,18 @@ console.log(storedResult, testResult);
 console.log(testResult.lastIndexOf(7.5));
 
 const personalData = [{ name: 'Justine' }, { name: 'Have' }];
-
 console.log(personalData.indexOf({ name: 'Have' }));
+
+const have = personalData.find((person, idx, persons) => {
+  return person.name === 'Have';
+});
+
+have.name = 'Shannel';
+
+console.log(have, personalData);
+
+const justineIndex = personalData.findIndex((person, idx, persons) => {
+  return person.name === 'Justine';
+});
+
+console.log(justineIndex);
