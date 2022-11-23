@@ -120,12 +120,13 @@ console.log(filteredPrices);
 
 // console.log(sum);
 
+// Reduce()
 const sum = prices.reduce((preValue, currValue) => preValue + currValue, 0);
 
 console.log(sum);
 
 const data = 'NewYork;10.99;Have';
-
+// Split() & Join()
 const transfomedData = data.split(';');
 transfomedData[1] = +transfomedData[1];
 console.log(transfomedData);
@@ -134,3 +135,19 @@ const nameFragment = ['Have', 'Samuel'];
 const label = nameFragment.join(' ');
 
 console.log(label);
+
+// Spread Operator
+const copiedNameFragment = [...nameFragment];
+nameFragment.push('Kabareebe');
+console.log(nameFragment, copiedNameFragment);
+
+console.log(Math.min(...prices));
+
+const person = [{ name: 'Have', age: 35 }, { name: 'Shannel', age: 30 }];
+person.push({ name: 'Kente', age: 8 });
+const copiedPersons = person.map((person) => (
+  { name: person.name, age: person.age }));
+
+// person[1].age = 35;
+
+console.log(person, copiedPersons);
